@@ -5,7 +5,7 @@ parser.add_argument("-n", "--name",type=str, help = "姓名")
 args = parser.parse_args()
 
 if not args.name:
-    name = input("請輸入姓名:")
+    name = input("請輸入姓名: ")
 else:
     name = args.name
 print (name)
