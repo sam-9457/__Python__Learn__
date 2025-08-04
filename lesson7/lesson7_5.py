@@ -18,7 +18,6 @@ for i in range(freqency):
     count = 0
     target = random.randint(min,max)
     while(True):
-        print(target)
         keyin = int(input(f"猜數字範圍{min}~{max}:"))
         count += 1
         if(keyin>=min and keyin<=max):
@@ -36,4 +35,4 @@ for i in range(freqency):
         else:
             print("請輸入提示範圍內的數字\n")
 
-    print(f"遊戲結束,{name},共玩了{freqency}次")    
+print(f"遊戲結束,{name},共玩了{freqency}次")    
