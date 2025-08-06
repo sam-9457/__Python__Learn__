@@ -2,4 +2,5 @@
 學習python
 ```python
 git config pull.rebase false
+"git push --force"
 ```
