@@ -1,8 +1,7 @@
-import random
-
-name1 = input("Name: ")
-cash1 = random.randint(1, 1000)
-
-player1 = {"Name": name1,
-           "Cash": cash1}
-print(player1)
+def playGame():
+    while True:
+        key_in = input("出拳(sisser, rock, paper)")
+def result():
+    pass
+if __name__ == "__main__":
+    playGame()
