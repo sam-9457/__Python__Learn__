@@ -1,6 +1,11 @@
 import random
 
 def playGame():
+    """
+    猜拳遊戲
+    玩家可以輸入剪刀、石頭或布，電腦隨機選擇一個出拳。
+    玩家可以輸入 q 來結束遊戲
+    """
     while True:
         key_in = input("請輸入剪刀/石頭/布（輸入 q 離開）：")
         if key_in == "剪刀":
@@ -26,6 +31,7 @@ def result(key_in, target, Victory_or_defeat):
     else:
         Victory_or_defeat["平手"] += 1
 def main():
+
     main_key_in = ["剪刀", "石頭", "布"]
     Victory_or_defeat = {"勝":0, "敗":0, "平手":0}
     print("======猜拳遊戲=======\n")
