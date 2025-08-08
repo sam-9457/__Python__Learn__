@@ -4,7 +4,7 @@ import random
 def input_names(players:list[dict]):
     parser = argparse.ArgumentParser(description="猜數字遊戲")
     parser.add_argument("-m", "--master",type=str, help = "保持者")
-    parser.add_argument("-c", "--challenger",type=str, help = '挑單者')
+    parser.add_argument("-c", "--challenger",type=str, help = '挑戰者')
     args = parser.parse_args()
 
     if not (args.master):
@@ -13,7 +13,7 @@ def input_names(players:list[dict]):
         hostname = args.master
     
     if not (args.challenger):
-        challenger_name = input("請輸入挑單者姓名:")
+        challenger_name = input("請輸入挑戰者姓名:")
     else:
         challenger_name = args.challenger
     
@@ -51,9 +51,7 @@ def play_games(players:list[dict]):
                 print("請輸入提示範圍內的數字\n")
         player['play_times'] = count
         print(f"{player['name']},猜了{player['play_times']}")
-
     
-
 def main():
     players = [
         {"name":"","play_times":0,"roler":""},
@@ -68,7 +66,8 @@ def main():
     play_games(players)
     print("3.遊戲結束")
 
-
+    if players[0]["play_times"] < players[1]["play_times"]:
+        print(f"{players[0]["name"]}贏了")
 #todo:輸出比賽結果
 
 
